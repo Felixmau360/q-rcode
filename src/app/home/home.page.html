@@ -1,20 +1,20 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      QRcode Scanner
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-card (click)="scanBarcode()">
+    <ion-thumbnail slot="start" [style.background]="'rgba(240, 90, 120, 0.2)'">
+    <ion-icon name="scan-outline" color="tertiary"></ion-icon>
+    </ion-thumbnail>
+    <ion-label> Scan QRcode</ion-label>
+  </ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <ion-text> {{ resultado }}</ion-text>
+  </ion-card>
 </ion-content>
