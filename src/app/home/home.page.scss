@@ -1,18 +1,40 @@
-ion-card{
+.button-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--ion-color-primary);
+  height: 200px;
 }
 
-ion-toolbar{
-  background-color: var(--ion-color-danger);
+.scan-button {
+  width: 150px;
+  height: 150px;
 }
 
-ion-text{
+.button-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+}
+
+ion-icon {
+  font-size: 32px;
+  color: var(--ion-color-dark);
+}
+
+span {
+  color: var(--ion-color-dark);
+  font-weight: bold;
+  font-size: large;
+}
+
+ion-text {
   color: var(--ion-color-dark);
   font-weight: bold;
   font-size: 20px;
   text-align: center;
 }
+

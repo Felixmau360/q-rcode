@@ -23,7 +23,7 @@
     "@angular/router": "^18.0.0",
     "@capacitor/android": "6.2.0",
     "@capacitor/app": "6.0.2",
-    "@capacitor/barcode-scanner": "^1.0.3",
+    "@capacitor/barcode-scanner": "^2.0.1-dev-20241210T162906.0",
     "@capacitor/core": "6.2.0",
     "@capacitor/haptics": "6.0.2",
     "@capacitor/keyboard": "6.0.3",
