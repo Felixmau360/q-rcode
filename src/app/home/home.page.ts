@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CapacitorBarcodeScanner, CapacitorBarcodeScannerScanResult } from '@capacitor/barcode-scanner'
+import { CapacitorBarcodeScanner } from '@capacitor/barcode-scanner'
 
 @Component({
   selector: 'app-home',
@@ -11,6 +11,8 @@ export class HomePage {
   constructor() {}
 
   resultado: string = "";
+  scannedCodes: string[] = [];
+  scanCount: number = 0;
 
   async scanBarcode(val?: number) {
     try {
@@ -20,7 +22,15 @@ export class HomePage {
       });
       
       console.log(result);
-      this.resultado = result.ScanResult;
+
+      if (this.scannedCodes.includes(result.ScanResult)) {
+        alert('Código já escaneado');
+      } else {
+        this.scannedCodes = [...this.scannedCodes, result.ScanResult];
+        this.scanCount++;
+        this.resultado = result.ScanResult;
+      }
+
     } catch(e: any) {
       console.error('Erro ao escanear:', e);
       if (e instanceof Error) {
@@ -31,5 +41,9 @@ export class HomePage {
         }
       }
     } 
+  }
+
+  getTotalScans(): number {
+    return this.scanCount;
   }
 }

@@ -18,6 +18,9 @@
 
   <ion-card class="resultado">
     <ion-card-header>Conteudo</ion-card-header>
-    <ion-card-content> {{ resultado }}</ion-card-content>
+    <ion-card-content>
+        <p>Total lidos: {{ getTotalScans() }}</p>
+        <p>Último código lido: {{ resultado }}</p>
+    </ion-card-content>
   </ion-card>
 </ion-content>
